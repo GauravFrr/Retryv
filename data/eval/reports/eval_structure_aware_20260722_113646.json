@@ -1,0 +1,3173 @@
+{
+  "id": "eval_structure_aware_20260722_113646",
+  "strategy": "structure_aware",
+  "timestamp": "2026-07-22T11:36:46.402697+00:00",
+  "total_queries": 52,
+  "aggregate_metrics": {
+    "retrieval_recall": 0.2308,
+    "retrieval_precision": 0.0,
+    "citation_accuracy": 0.0,
+    "faithfulness": 0.0,
+    "correctness": 0.2308
+  },
+  "category_breakdown": {
+    "lookup": {
+      "category": "lookup",
+      "count": 20,
+      "mean_scores": {
+        "retrieval_recall": 0.0,
+        "retrieval_precision": 0.0,
+        "citation_accuracy": 0.0,
+        "faithfulness": 0.0,
+        "correctness": 0.0
+      }
+    },
+    "multi_hop": {
+      "category": "multi_hop",
+      "count": 12,
+      "mean_scores": {
+        "retrieval_recall": 0.0,
+        "retrieval_precision": 0.0,
+        "citation_accuracy": 0.0,
+        "faithfulness": 0.0,
+        "correctness": 0.0
+      }
+    },
+    "ambiguous": {
+      "category": "ambiguous",
+      "count": 8,
+      "mean_scores": {
+        "retrieval_recall": 0.0,
+        "retrieval_precision": 0.0,
+        "citation_accuracy": 0.0,
+        "faithfulness": 0.0,
+        "correctness": 0.0
+      }
+    },
+    "unanswerable": {
+      "category": "unanswerable",
+      "count": 12,
+      "mean_scores": {
+        "retrieval_recall": 1.0,
+        "retrieval_precision": 0.0,
+        "citation_accuracy": 0.0,
+        "faithfulness": 0.0,
+        "correctness": 1.0
+      }
+    }
+  },
+  "results": [
+    {
+      "query_id": "lifespan-events",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/events.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/events.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context, completely failing to answer the query, whereas the reference answer provides a clear explanation of how lifespan events work using async context managers.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context, completely failing to answer the query, whereas the reference answer provides a clear explanation of how lifespan events work using async context managers."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "path-parameters",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/path-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/path-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context, completely failing to answer the question, whereas the reference answer provides a clear explanation and syntax example.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context, completely failing to answer the question, whereas the reference answer provides a clear explanation and syntax example."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "dependency-injection",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, completely failing to provide the requested information about dependency injection in FastAPI.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, completely failing to provide the requested information about dependency injection in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "pydantic-models",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, completely failing to provide any information about how to use Pydantic models with FastAPI, whereas the expected reference answer covers subclassing `BaseModel`, request body binding, and automatic validation.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, completely failing to provide any information about how to use Pydantic models with FastAPI, whereas the expected reference answer covers subclassing `BaseModel`, request body binding, and automatic validation."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "json-response",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context, completely failing to answer the question despite the information being standard FastAPI knowledge expected in the reference answer.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context, completely failing to answer the question despite the information being standard FastAPI knowledge expected in the reference answer."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "api-router",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, failing to provide any information about the purpose of `APIRouter`.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, failing to provide any information about the purpose of `APIRouter`."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "http-exceptions",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it lacks enough context, completely failing to answer the question, whereas the reference answer provides the correct method using `HTTPException`, `status_code`, and `detail`.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it lacks enough context, completely failing to answer the question, whereas the reference answer provides the correct method using `HTTPException`, `status_code`, and `detail`."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "request-body-validation",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, whereas the reference answer provides a clear explanation using Pydantic `BaseModel` and mentions the automatic 422 HTTP validation error response.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, whereas the reference answer provides a clear explanation using Pydantic `BaseModel` and mentions the automatic 422 HTTP validation error response."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "background-tasks",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, failing to provide any information about FastAPI background tasks.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, failing to provide any information about FastAPI background tasks."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "oauth2-password-flow",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states it does not have enough context, failing to provide any of the required details (`OAuth2PasswordBearer`, `OAuth2PasswordRequestForm`, and JWT access tokens) present in the expected reference answer.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states it does not have enough context, failing to provide any of the required details (`OAuth2PasswordBearer`, `OAuth2PasswordRequestForm`, and JWT access tokens) present in the expected reference answer."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "cors-middleware",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, failing to provide the solution found in the reference answer.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, failing to provide the solution found in the reference answer."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "async-path-operations",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, failing to provide the requested information about writing async path operation functions in FastAPI.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, failing to provide the requested information about writing async path operation functions in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "test-client",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/testing.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/testing.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states it does not have enough context, completely failing to answer the question about the purpose of TestClient in FastAPI.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states it does not have enough context, completely failing to answer the question about the purpose of TestClient in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "query-params-defaults",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states a lack of context and fails to provide any information about declaring query parameters with default values in FastAPI.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states a lack of context and fails to provide any information about declaring query parameters with default values in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "response-model-filter",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, whereas the expected reference answer provides a clear explanation of how to use `response_model` to filter output fields.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, whereas the expected reference answer provides a clear explanation of how to use `response_model` to filter output fields."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "query-param-validation-field",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it lacks context and fails to answer the question, whereas the reference answer provides the correct implementation using `Query()`, `min_length`, `max_length`, and `pattern`.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it lacks context and fails to answer the question, whereas the reference answer provides the correct implementation using `Query()`, `min_length`, `max_length`, and `pattern`."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "custom-response-class",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, completely failing to provide the requested information about returning HTML or custom responses in FastAPI.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, completely failing to provide the requested information about returning HTML or custom responses in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "cookie-parameters",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cookie-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cookie-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, failing to provide the information about declaring cookie parameters using `Cookie()` from FastAPI as requested.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, failing to provide the information about declaring cookie parameters using `Cookie()` from FastAPI as requested."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "header-parameters",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/header-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/header-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context, completely failing to answer the user's question, whereas the reference answer provides the correct implementation using `Header()` and explains the hyphen-to-underscore conversion.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context, completely failing to answer the user's question, whereas the reference answer provides the correct implementation using `Header()` and explains the hyphen-to-underscore conversion."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "file-uploads-bytes",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/request-files.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/request-files.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context, completely failing to answer the query, whereas the expected answer provides key details about `UploadFile` and `File()`.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context, completely failing to answer the query, whereas the expected answer provides key details about `UploadFile` and `File()`."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "lifespan-with-background-tasks",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/events.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/events.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, completely failing to provide the requested information about lifespan events and background tasks.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, completely failing to provide the requested information about lifespan events and background tasks."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "oauth2-custom-exception-handler",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, failing to provide the solution found in the expected reference answer.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, failing to provide the solution found in the expected reference answer."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "dependencies-with-yield-and-db-session",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, completely missing the explanation of how to manage database sessions using dependency injection with `yield`, `try/finally`, and error handling as provided in the expected reference answer.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, completely missing the explanation of how to manage database sessions using dependency injection with `yield`, `try/finally`, and error handling as provided in the expected reference answer."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "apirouter-tags-and-security-dependencies",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md",
+              "docs/en/docs/tutorial/dependencies/global-dependencies.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md",
+              "docs/en/docs/tutorial/dependencies/global-dependencies.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it lacks context and fails to provide the solution, whereas the reference answer clearly explains how to use `dependencies` and `tags` parameters when instantiating an `APIRouter`.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it lacks context and fails to provide the solution, whereas the reference answer clearly explains how to use `dependencies` and `tags` parameters when instantiating an `APIRouter`."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "pydantic-custom-validation-and-status-codes",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, completely missing both the explanation of `RequestValidationError` and how to override it using an exception handler.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, completely missing both the explanation of `RequestValidationError` and how to override it using an exception handler."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "cors-and-security-headers",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, failing to provide the required technical solution involving `CORSMiddleware` and `OAuth2PasswordBearer`.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, failing to provide the required technical solution involving `CORSMiddleware` and `OAuth2PasswordBearer`."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "background-tasks-with-db-dependency",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal (\"I do not have enough context...\"), whereas the reference answer provides a specific and detailed explanation regarding database session lifecycles and background tasks in FastAPI.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal (\"I do not have enough context...\"), whereas the reference answer provides a specific and detailed explanation regarding database session lifecycles and background tasks in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "sub-dependencies-auth-scopes",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/tutorial/dependencies/sub-dependencies.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/tutorial/dependencies/sub-dependencies.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, completely failing to provide the requested information about creating a hierarchy of security dependencies using sub-dependencies in FastAPI.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, completely failing to provide the requested information about creating a hierarchy of security dependencies using sub-dependencies in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "middleware-vs-dependencies-timing",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/tutorial/middleware.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/tutorial/middleware.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, completely failing to provide the requested information about execution order.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, completely failing to provide the requested information about execution order."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "custom-request-validation-and-response-model",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/tutorial/body-fields.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/tutorial/body-fields.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, whereas the expected reference answer provides a clear explanation of how to use Pydantic `Field()` for input validation alongside `response_model` for output filtering.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, whereas the expected reference answer provides a clear explanation of how to use Pydantic `Field()` for input validation alongside `response_model` for output filtering."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "testing-override-dependencies",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/testing.md",
+              "docs/en/docs/advanced/testing-dependencies.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/testing.md",
+              "docs/en/docs/advanced/testing-dependencies.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, whereas the reference answer provides the specific mechanism (`app.dependency_overrides`) for overriding database dependencies during testing with `TestClient`.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, whereas the reference answer provides the specific mechanism (`app.dependency_overrides`) for overriding database dependencies during testing with `TestClient`."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "web-sockets-with-dependencies",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/advanced/websockets.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/advanced/websockets.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it lacks enough context, completely failing to answer the question, whereas the reference answer provides a clear explanation of how to authenticate WebSockets using dependency injection in FastAPI.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it lacks enough context, completely failing to answer the question, whereas the reference answer provides a clear explanation of how to authenticate WebSockets using dependency injection in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "validation-in-fastapi",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 3 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/path-params-numeric-validations.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/path-params-numeric-validations.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations of FastAPI validation.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations of FastAPI validation."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "task-execution-options",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md",
+              "docs/en/docs/async.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md",
+              "docs/en/docs/async.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations listed in the reference notes.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations listed in the reference notes."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-security-overview",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md",
+              "docs/en/docs/tutorial/security/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md",
+              "docs/en/docs/tutorial/security/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, failing to provide any of the valid security mechanisms (like OAuth2, API keys, or CORS) listed in the reference notes.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, failing to provide any of the valid security mechanisms (like OAuth2, API keys, or CORS) listed in the reference notes."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "database-integration-options",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/sql-databases.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/sql-databases.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states \"I do not have enough context to answer this question,\" failing to provide any information on how to connect to a database in FastAPI, whereas the reference notes indicate that explaining database sessions via dependencies is a valid and expected interpretation for this query.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states \"I do not have enough context to answer this question,\" failing to provide any information on how to connect to a database in FastAPI, whereas the reference notes indicate that explaining database sessions via dependencies is a valid and expected interpretation for this query."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-error-handling-ways",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, failing to cover any of the valid interpretations for error management in FastAPI.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, failing to cover any of the valid interpretations for error management in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-performance-tuning",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/deployment/concepts.md",
+              "docs/en/docs/async.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/deployment/concepts.md",
+              "docs/en/docs/async.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations listed in the reference notes.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations listed in the reference notes."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-deployment-methods",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/deployment/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/deployment/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations listed in the reference notes.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations listed in the reference notes."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-middleware-usage",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/tutorial/middleware.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/tutorial/middleware.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, failing to provide either built-in middleware or custom middleware usage, despite both being valid interpretations of the query.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, failing to provide either built-in middleware or custom middleware usage, despite both being valid interpretations of the query."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "django-kubernetes",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "capital-of-france",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "cricket-rules",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "medieval-castles",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "react-architecture",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "nginx-nodejs",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "vitamin-d-deficiency",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "binary-search-tree-java",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "special-relativity",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "dockerfile-go",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "tcp-vs-udp",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "jvm-gc",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    }
+  ]
+}

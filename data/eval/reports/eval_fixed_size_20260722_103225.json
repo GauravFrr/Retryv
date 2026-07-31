@@ -1,0 +1,136 @@
+{
+  "id": "eval_fixed_size_20260722_103225",
+  "strategy": "fixed_size",
+  "timestamp": "2026-07-22T10:32:25.777622+00:00",
+  "total_queries": 3,
+  "aggregate_metrics": {
+    "retrieval_recall": 0.0,
+    "retrieval_precision": 0.0,
+    "citation_accuracy": 0.0,
+    "faithfulness": 0.0,
+    "correctness": 0.0
+  },
+  "category_breakdown": {
+    "lookup": {
+      "category": "lookup",
+      "count": 3,
+      "mean_scores": {
+        "retrieval_recall": 0.0,
+        "retrieval_precision": 0.0,
+        "citation_accuracy": 0.0,
+        "faithfulness": 0.0,
+        "correctness": 0.0
+      }
+    }
+  },
+  "results": [
+    {
+      "query_id": "lifespan-events",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "path-parameters",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "dependency-injection",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: name 'logger' is not defined",
+          "metadata": {}
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+# Environment & Secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data & Database persistence
+data/chroma_db/
+data/bm25_*.pkl
+*.pkl
+
+# Logs
+*.log
+
+# IDEs & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Agent & Workspace Configuration
+.agents/
+TODO.md
+linkedin-content-log.md
+demo_video_script.md
+CLAUDE.md
+context/

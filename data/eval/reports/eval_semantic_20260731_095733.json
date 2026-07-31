@@ -1,0 +1,3407 @@
+{
+  "id": "eval_semantic_20260731_095733",
+  "strategy": "semantic",
+  "timestamp": "2026-07-31T09:57:33.379743+00:00",
+  "total_queries": 52,
+  "aggregate_metrics": {
+    "retrieval_recall": 0.7596,
+    "retrieval_precision": 0.2641,
+    "citation_accuracy": 0.434,
+    "faithfulness": 0.2807,
+    "correctness": 0.3625
+  },
+  "category_breakdown": {
+    "lookup": {
+      "category": "lookup",
+      "count": 20,
+      "mean_scores": {
+        "retrieval_recall": 0.8,
+        "retrieval_precision": 0.3208,
+        "citation_accuracy": 0.5067,
+        "faithfulness": 0.34,
+        "correctness": 0.2525
+      }
+    },
+    "multi_hop": {
+      "category": "multi_hop",
+      "count": 12,
+      "mean_scores": {
+        "retrieval_recall": 0.625,
+        "retrieval_precision": 0.4583,
+        "citation_accuracy": 0.4583,
+        "faithfulness": 0.2917,
+        "correctness": 0.15
+      }
+    },
+    "ambiguous": {
+      "category": "ambiguous",
+      "count": 8,
+      "mean_scores": {
+        "retrieval_recall": 0.5,
+        "retrieval_precision": 0.2271,
+        "citation_accuracy": 0.2833,
+        "faithfulness": 0.15,
+        "correctness": 0.125
+      }
+    },
+    "unanswerable": {
+      "category": "unanswerable",
+      "count": 12,
+      "mean_scores": {
+        "retrieval_recall": 1.0,
+        "retrieval_precision": 0.0,
+        "citation_accuracy": 0.0,
+        "faithfulness": 0.0,
+        "correctness": 0.9167
+      }
+    }
+  },
+  "results": [
+    {
+      "query_id": "lifespan-events",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/testing-events.md",
+              "docs/en/docs/advanced/events.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/events.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/events.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/testing-events.md",
+              "docs/en/docs/advanced/events.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/events.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/events.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.8,
+          "reasoning": "4 of 5 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 5
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.8,
+          "reasoning": "Citation support Sc=0.80, Uncited groundedness Su=1.00. All sentences contain explicit inline citations.",
+          "metadata": {
+            "Sc_citation_support": 0.8,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": []
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.7,
+          "reasoning": "The generated answer correctly identifies the `lifespan` parameter and the use of an async context manager. However, it fails to explain the core mechanism of how the logic is structured (i.e., code before `yield` for startup and code after `yield` for shutdown), which is a critical requirement of the quality criteria. It provides helpful additional context about testing and sub-applications, but misses the fundamental implementation detail requested.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.7\n\nREASON: The generated answer correctly identifies the `lifespan` parameter and the use of an async context manager. However, it fails to explain the core mechanism of how the logic is structured (i.e., code before `yield` for startup and code after `yield` for shutdown), which is a critical requirement of the quality criteria. It provides helpful additional context about testing and sub-applications, but misses the fundamental implementation detail requested."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "path-parameters",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/query-params.md",
+              "docs/en/docs/tutorial/dependencies/global-dependencies.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/body-multiple-params.md",
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/path-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/query-params.md",
+              "docs/en/docs/tutorial/dependencies/global-dependencies.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/body-multiple-params.md",
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/path-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 1.0,
+          "reasoning": "4 of 4 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 4
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Citation verification failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_limit_value': '0', 'quota_unit': '1/min/{project}/{region}', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'consumer': 'projects/490710630994', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_location': 'asia-southeast1', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Citation verification failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_limit_value': '0', 'quota_unit': '1/min/{project}/{region}', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'consumer': 'projects/490710630994', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_location': 'asia-southeast1', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "dependency-injection",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'consumer': 'projects/547685505959', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'quota_unit': '1/min/{project}/{region}', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'consumer': 'projects/547685505959', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'quota_unit': '1/min/{project}/{region}', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'consumer': 'projects/547685505959', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'quota_unit': '1/min/{project}/{region}', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "pydantic-models",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/how-to/migrate-from-pydantic-v1-to-pydantic-v2.md",
+              "docs/en/docs/advanced/dataclasses.md",
+              "docs/en/docs/tutorial/request-form-models.md",
+              "docs/en/docs/advanced/additional-responses.md",
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/how-to/migrate-from-pydantic-v1-to-pydantic-v2.md",
+              "docs/en/docs/advanced/dataclasses.md",
+              "docs/en/docs/tutorial/request-form-models.md",
+              "docs/en/docs/advanced/additional-responses.md",
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "LLM judge evaluation failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_unit': '1/min/{project}/{region}', 'quota_limit_value': '0', 'consumer': 'projects/835724681694', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_location': 'asia-southeast1'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {
+            "category": "lookup"
+          }
+        }
+      }
+    },
+    {
+      "query_id": "json-response",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/advanced/additional-status-codes.md",
+              "docs/en/docs/advanced/response-directly.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/advanced/additional-status-codes.md",
+              "docs/en/docs/advanced/response-directly.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 1.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "By default, FastAPI returns responses using a `JSONResponse` [1, 4].",
+              "When you return data from a path operation, FastAPI serializes it to JSON using Pydantic if a response model is declared [2, 3].",
+              "If no response model is declared, FastAPI uses the `jsonable_encoder` to convert the data before placing it in a `JSONResponse` [2, 3]."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "The generated answer is accurate and comprehensive. It correctly identifies that FastAPI handles JSON serialization automatically, mentions the role of Pydantic models and `jsonable_encoder`, and explicitly references `JSONResponse`. It covers all the points required by the quality criteria.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 1.0\nREASON: The generated answer is accurate and comprehensive. It correctly identifies that FastAPI handles JSON serialization automatically, mentions the role of Pydantic models and `jsonable_encoder`, and explicitly references `JSONResponse`. It covers all the points required by the quality criteria."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "api-router",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md",
+              "docs/en/docs/tutorial/static-files.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md",
+              "docs/en/docs/tutorial/static-files.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.8,
+          "reasoning": "4 of 5 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 5
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.8,
+          "reasoning": "Citation support Sc=0.80, Uncited groundedness Su=1.00. All sentences contain explicit inline citations.",
+          "metadata": {
+            "Sc_citation_support": 0.8,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": []
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.7,
+          "reasoning": "The generated answer correctly identifies that `APIRouter` is used to group path operations and mentions its utility for modularity/sharing across projects. However, it fails to explicitly mention the core mechanism of using `app.include_router()` to attach these groups to the main application, which is a critical component of the expected answer and the primary way `APIRouter` is utilized in FastAPI.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.7\n\nREASON: The generated answer correctly identifies that `APIRouter` is used to group path operations and mentions its utility for modularity/sharing across projects. However, it fails to explicitly mention the core mechanism of using `app.include_router()` to attach these groups to the main application, which is a critical component of the expected answer and the primary way `APIRouter` is utilized in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "http-exceptions",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/reference/exceptions.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.3333333333333333,
+          "reasoning": "1 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/reference/exceptions.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal to answer (\"I do not have enough context\"), failing to provide any of the required technical information requested by the user.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal to answer (\"I do not have enough context\"), failing to provide any of the required technical information requested by the user."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "request-body-validation",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/body-multiple-params.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.3333333333333333,
+          "reasoning": "1 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/body-multiple-params.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_unit': '1/min/{project}/{region}', 'quota_limit_value': '0', 'consumer': 'projects/490710630994', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'service': 'generativelanguage.googleapis.com', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_unit': '1/min/{project}/{region}', 'quota_limit_value': '0', 'consumer': 'projects/490710630994', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'service': 'generativelanguage.googleapis.com', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_unit': '1/min/{project}/{region}', 'quota_limit_value': '0', 'consumer': 'projects/490710630994', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'service': 'generativelanguage.googleapis.com', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "background-tasks",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/reference/background.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/reference/background.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "LLM judge evaluation failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_location': 'asia-southeast1', 'consumer': 'projects/547685505959', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {
+            "category": "lookup"
+          }
+        }
+      }
+    },
+    {
+      "query_id": "oauth2-password-flow",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/security/simple-oauth2.md",
+              "docs/en/docs/tutorial/security/index.md",
+              "docs/en/docs/tutorial/security/first-steps.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.25,
+          "reasoning": "1 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/security/simple-oauth2.md",
+              "docs/en/docs/tutorial/security/index.md",
+              "docs/en/docs/tutorial/security/first-steps.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'consumer': 'projects/835724681694', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'consumer': 'projects/835724681694', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'consumer': 'projects/835724681694', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "cors-middleware",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/advanced/response-headers.md",
+              "docs/en/docs/tutorial/cors.md",
+              "docs/en/docs/reference/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/cors.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.25,
+          "reasoning": "1 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/advanced/response-headers.md",
+              "docs/en/docs/tutorial/cors.md",
+              "docs/en/docs/reference/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/cors.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 1.0,
+          "reasoning": "1 of 1 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 1
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "To add CORS middleware in your FastAPI application, you must import `CORSMiddleware` from `fastapi.middleware.cors` [1, 2].",
+              "You then create a list of allowed origins as strings and add the middleware to your application using `app.add_middleware()` [1, 3].",
+              "```python\nfrom fastapi.middleware.cors import CORSMiddleware\n\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    # ..."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.95,
+          "reasoning": "The generated answer is highly accurate and follows the quality criteria perfectly. It correctly identifies the necessary import, the method to add the middleware, and the `allow_origins` configuration. It is slightly more comprehensive than the reference answer by mentioning `expose_headers`, though it omits the specific default parameters (like `allow_methods` and `allow_headers`) mentioned in the reference answer. Overall, it is an excellent response.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.95\nREASON: The generated answer is highly accurate and follows the quality criteria perfectly. It correctly identifies the necessary import, the method to add the middleware, and the `allow_origins` configuration. It is slightly more comprehensive than the reference answer by mentioning `expose_headers`, though it omits the specific default parameters (like `allow_methods` and `allow_headers`) mentioned in the reference answer. Overall, it is an excellent response."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "async-path-operations",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/advanced/stream-data.md",
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/async.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.3333333333333333,
+          "reasoning": "1 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/advanced/stream-data.md",
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/async.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.5,
+          "reasoning": "1 of 2 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 2
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.5,
+          "reasoning": "Citation support Sc=0.50, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 0.5,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "You can also mix `async def` and normal `def` functions when using dependencies, as the same rules apply to both [4, 5]."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.8,
+          "reasoning": "The generated answer correctly identifies the syntax (`async def`) and mentions the distinction regarding blocking I/O. However, it lacks the technical clarity of the reference answer regarding *how* FastAPI handles the two types (event loop vs. thread pool), which is the core technical distinction required by the quality criteria.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.8\n\nREASON: The generated answer correctly identifies the syntax (`async def`) and mentions the distinction regarding blocking I/O. However, it lacks the technical clarity of the reference answer regarding *how* FastAPI handles the two types (event loop vs. thread pool), which is the core technical distinction required by the quality criteria."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "test-client",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/reference/testclient.md",
+              "docs/en/docs/tutorial/testing.md",
+              "docs/en/docs/advanced/async-tests.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/testing.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/testing.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.3333333333333333,
+          "reasoning": "1 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/reference/testclient.md",
+              "docs/en/docs/tutorial/testing.md",
+              "docs/en/docs/advanced/async-tests.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/testing.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/testing.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.75,
+          "reasoning": "3 of 4 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 4
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Citation verification failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'consumer': 'projects/490710630994', 'quota_unit': '1/min/{project}/{region}', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'service': 'generativelanguage.googleapis.com', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Citation verification failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'consumer': 'projects/490710630994', 'quota_unit': '1/min/{project}/{region}', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'service': 'generativelanguage.googleapis.com', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "query-params-defaults",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md",
+              "docs/en/docs/tutorial/query-params.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/query-params.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md",
+              "docs/en/docs/tutorial/query-params.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/query-params.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "LLM judge evaluation failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/547685505959', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_unit': '1/min/{project}/{region}', 'service': 'generativelanguage.googleapis.com', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {
+            "category": "lookup"
+          }
+        }
+      }
+    },
+    {
+      "query_id": "response-model-filter",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/response-change-status-code.md",
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/advanced/json-base64-bytes.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.3333333333333333,
+          "reasoning": "1 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/response-change-status-code.md",
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/advanced/json-base64-bytes.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_limit_value': '0', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_unit': '1/min/{project}/{region}', 'quota_location': 'asia-southeast1', 'consumer': 'projects/835724681694', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_limit_value': '0', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_unit': '1/min/{project}/{region}', 'quota_location': 'asia-southeast1', 'consumer': 'projects/835724681694', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_limit_value': '0', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_unit': '1/min/{project}/{region}', 'quota_location': 'asia-southeast1', 'consumer': 'projects/835724681694', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "query-param-validation-field",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md",
+              "docs/en/docs/tutorial/query-params.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md",
+              "docs/en/docs/tutorial/query-params.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 1.0,
+          "reasoning": "3 of 3 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 3
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "To add string validation to query parameters in FastAPI, you can use `Annotated` along with `Query` to define additional information and validation constraints [1, 3].",
+              "You can apply the following validations:\n\n* **Length constraints**: You can set `max_length` or `min_length` within the `Query` function to restrict the length of the string [2, 3]."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.9,
+          "reasoning": "The generated answer is highly accurate and covers all the necessary validation techniques. It correctly identifies the use of `Annotated` and `Query`. It loses a small fraction of points only because it omits a concrete code example, which is standard practice in FastAPI documentation to demonstrate the syntax clearly, as requested by the reference criteria.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.9\n\nREASON: The generated answer is highly accurate and covers all the necessary validation techniques. It correctly identifies the use of `Annotated` and `Query`. It loses a small fraction of points only because it omits a concrete code example, which is standard practice in FastAPI documentation to demonstrate the syntax clearly, as requested by the reference criteria."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "custom-response-class",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/advanced/response-directly.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/advanced/response-directly.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.75,
+          "reasoning": "3 of 4 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 4
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Citation verification failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'consumer': 'projects/490710630994'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Citation verification failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'consumer': 'projects/490710630994'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "cookie-parameters",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/tutorial/cookie-params.md",
+              "docs/en/docs/tutorial/cookie-param-models.md",
+              "docs/en/docs/tutorial/header-params.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cookie-params.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/cookie-params.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.25,
+          "reasoning": "1 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/tutorial/cookie-params.md",
+              "docs/en/docs/tutorial/cookie-param-models.md",
+              "docs/en/docs/tutorial/header-params.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cookie-params.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/cookie-params.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'service': 'generativelanguage.googleapis.com', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'consumer': 'projects/547685505959'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'service': 'generativelanguage.googleapis.com', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'consumer': 'projects/547685505959'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'service': 'generativelanguage.googleapis.com', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'consumer': 'projects/547685505959'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "header-parameters",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/python-types.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/header-param-models.md",
+              "docs/en/docs/advanced/behind-a-proxy.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/header-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/python-types.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/header-param-models.md",
+              "docs/en/docs/advanced/behind-a-proxy.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/header-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'quota_unit': '1/min/{project}/{region}', 'quota_location': 'asia-southeast1', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'consumer': 'projects/835724681694', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'quota_unit': '1/min/{project}/{region}', 'quota_location': 'asia-southeast1', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'consumer': 'projects/835724681694', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'quota_unit': '1/min/{project}/{region}', 'quota_location': 'asia-southeast1', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'consumer': 'projects/835724681694', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "file-uploads-bytes",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/request-files.md",
+              "docs/en/docs/deployment/docker.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/request-files.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/request-files.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/request-files.md",
+              "docs/en/docs/deployment/docker.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/request-files.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/request-files.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal that provides no information, failing to address the query entirely despite the information being standard knowledge within the FastAPI framework.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal that provides no information, failing to address the query entirely despite the information being standard knowledge within the FastAPI framework."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "lifespan-with-background-tasks",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 2 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/events.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/events.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/events.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 1.0,
+          "reasoning": "2 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/events.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/events.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/events.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal (\"I do not have enough context\") and fails to provide any information regarding the query. It does not meet the requirement of citing the relevant documentation files or explaining the conceptual difference between lifespan events and background tasks.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal (\"I do not have enough context\") and fails to provide any information regarding the query. It does not meet the requirement of citing the relevant documentation files or explaining the conceptual difference between lifespan events and background tasks."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "oauth2-custom-exception-handler",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/security/oauth2-scopes.md",
+              "docs/en/docs/deployment/concepts.md",
+              "docs/en/docs/tutorial/security/first-steps.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/security/oauth2-scopes.md",
+              "docs/en/docs/deployment/concepts.md",
+              "docs/en/docs/tutorial/security/first-steps.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal (\"I do not have enough context\"), failing to provide any of the requested technical guidance or cite the necessary documentation sources.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal (\"I do not have enough context\"), failing to provide any of the requested technical guidance or cite the necessary documentation sources."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "dependencies-with-yield-and-db-session",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/tutorial/sql-databases.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.3333333333333333,
+          "reasoning": "1 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/tutorial/sql-databases.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.6666666666666666,
+          "reasoning": "2 of 3 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 3
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.6666666666666666,
+          "reasoning": "Citation support Sc=0.67, Uncited groundedness Su=1.00. All sentences contain explicit inline citations.",
+          "metadata": {
+            "Sc_citation_support": 0.6666666666666666,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": []
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.9,
+          "reasoning": "The generated answer is highly accurate and addresses both the mechanism of `yield` for session management and the specific nuances of error handling. It correctly identifies the requirement to re-raise exceptions if caught within the dependency. The score is slightly docked only because it did not explicitly mention the `try/finally` pattern as the standard way to ensure cleanup, which is a key part of the expected reference answer.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.9\n\nREASON: The generated answer is highly accurate and addresses both the mechanism of `yield` for session management and the specific nuances of error handling. It correctly identifies the requirement to re-raise exceptions if caught within the dependency. The score is slightly docked only because it did not explicitly mention the `try/finally` pattern as the standard way to ensure cleanup, which is a key part of the expected reference answer."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "apirouter-tags-and-security-dependencies",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/dependencies/dependencies-in-path-operation-decorators.md",
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/global-dependencies.md",
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/dependencies/dependencies-in-path-operation-decorators.md",
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/global-dependencies.md",
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.6666666666666666,
+          "reasoning": "2 of 3 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 3
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Citation verification failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/490710630994', 'quota_unit': '1/min/{project}/{region}', 'quota_limit_value': '0', 'quota_location': 'asia-southeast1', 'service': 'generativelanguage.googleapis.com', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Citation verification failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/490710630994', 'quota_unit': '1/min/{project}/{region}', 'quota_limit_value': '0', 'quota_location': 'asia-southeast1', 'service': 'generativelanguage.googleapis.com', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "pydantic-custom-validation-and-status-codes",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 2 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/security/oauth2-scopes.md",
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/body.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.6666666666666666,
+          "reasoning": "2 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/security/oauth2-scopes.md",
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/body.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "LLM judge evaluation failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'service': 'generativelanguage.googleapis.com', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'consumer': 'projects/547685505959'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {
+            "category": "multi_hop"
+          }
+        }
+      }
+    },
+    {
+      "query_id": "cors-and-security-headers",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/security/oauth2-scopes.md",
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/cors.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/security/oauth2-scopes.md",
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/cors.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'consumer': 'projects/835724681694', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'quota_location': 'asia-southeast1'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'consumer': 'projects/835724681694', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'quota_location': 'asia-southeast1'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'consumer': 'projects/835724681694', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com', 'quota_location': 'asia-southeast1'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "background-tasks-with-db-dependency",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/reference/background.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.3333333333333333,
+          "reasoning": "1 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/reference/background.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.5,
+          "reasoning": "1 of 2 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 2
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.5,
+          "reasoning": "Citation support Sc=0.50, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 0.5,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "You can schedule these tasks by declaring a `BackgroundTasks` parameter in your path operation function or dependency function [2, 4]."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.9,
+          "reasoning": "The generated answer is highly accurate and provides the correct technical guidance. It correctly identifies the lifecycle issue (session closure) and recommends the best practice of passing IDs rather than objects. It meets the requirement of citing multiple sources. The only minor deduction is that the generated answer states \"the exit code of those dependencies is executed after the background tasks finish,\" which is technically incorrect—the exit code (session closure) happens *before* the background task runs, which is why the session is unusable. The expected reference answer correctly identifies this timing conflict.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.9\n\nREASON: The generated answer is highly accurate and provides the correct technical guidance. It correctly identifies the lifecycle issue (session closure) and recommends the best practice of passing IDs rather than objects. It meets the requirement of citing multiple sources. The only minor deduction is that the generated answer states \"the exit code of those dependencies is executed after the background tasks finish,\" which is technically incorrect—the exit code (session closure) happens *before* the background task runs, which is why the session is unusable. The expected reference answer correctly identifies this timing conflict."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "sub-dependencies-auth-scopes",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/security/oauth2-scopes.md",
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/tutorial/dependencies/sub-dependencies.md",
+              "docs/en/docs/async.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/sub-dependencies.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/dependencies/sub-dependencies.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.25,
+          "reasoning": "1 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/security/oauth2-scopes.md",
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/tutorial/dependencies/sub-dependencies.md",
+              "docs/en/docs/async.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/sub-dependencies.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/dependencies/sub-dependencies.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal (\"I do not have enough context\"), failing to provide any information regarding the requested topic. It completely misses the opportunity to explain dependency chaining as outlined in the reference answer and fails to meet the source citation requirements.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal (\"I do not have enough context\"), failing to provide any information regarding the requested topic. It completely misses the opportunity to explain dependency chaining as outlined in the reference answer and fails to meet the source citation requirements."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "middleware-vs-dependencies-timing",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/middleware.md",
+              "docs/en/docs/tutorial/bigger-applications.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+              "docs/en/docs/tutorial/frontend.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/tutorial/middleware.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/middleware.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.25,
+          "reasoning": "1 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/middleware.md",
+              "docs/en/docs/tutorial/bigger-applications.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+              "docs/en/docs/tutorial/frontend.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/tutorial/middleware.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/middleware.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal (\"I do not have enough context\"), failing to provide any information. It completely misses the requirement to synthesize information from `middleware.md` and `dependencies/index.md` to explain the request pipeline ordering.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal (\"I do not have enough context\"), failing to provide any information. It completely misses the requirement to synthesize information from `middleware.md` and `dependencies/index.md` to explain the request pipeline ordering."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "custom-request-validation-and-response-model",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 2 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/response-change-status-code.md",
+              "docs/en/docs/tutorial/body-fields.md",
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/how-to/custom-request-and-route.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body-fields.md",
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/body-fields.md",
+              "docs/en/docs/tutorial/response-model.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "2 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/response-change-status-code.md",
+              "docs/en/docs/tutorial/body-fields.md",
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/how-to/custom-request-and-route.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body-fields.md",
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/body-fields.md",
+              "docs/en/docs/tutorial/response-model.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal (\"I do not have enough context\"), failing to provide any information or cite the required documentation files. It does not address the user's query at all.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal (\"I do not have enough context\"), failing to provide any information or cite the required documentation files. It does not address the user's query at all."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "testing-override-dependencies",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/settings.md",
+              "docs/en/docs/advanced/testing-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/testing-dependencies.md",
+              "docs/en/docs/tutorial/testing.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/testing-dependencies.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/settings.md",
+              "docs/en/docs/advanced/testing-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/testing-dependencies.md",
+              "docs/en/docs/tutorial/testing.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/testing-dependencies.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal (\"I do not have enough context\"), failing to provide any information. It does not meet the requirement of citing the relevant documentation or explaining the `app.dependency_overrides` mechanism.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal (\"I do not have enough context\"), failing to provide any information. It does not meet the requirement of citing the relevant documentation or explaining the `app.dependency_overrides` mechanism."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "web-sockets-with-dependencies",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 2 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/reference/websockets.md",
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/advanced/websockets.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/advanced/websockets.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/advanced/websockets.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.6666666666666666,
+          "reasoning": "2 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/reference/websockets.md",
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/advanced/websockets.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/advanced/websockets.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md",
+              "docs/en/docs/advanced/websockets.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal (\"I do not have enough context\"), failing to provide any information. It does not address the query, nor does it meet the requirement of citing the two specified source files.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal (\"I do not have enough context\"), failing to provide any information. It does not address the query, nor does it meet the requirement of citing the two specified source files."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "validation-in-fastapi",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 3 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/path-params-numeric-validations.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/path-params-numeric-validations.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal (\"I do not have enough context\") despite the query being a standard, well-documented topic in FastAPI. It fails to address any of the valid interpretations provided in the reference notes.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal (\"I do not have enough context\") despite the query being a standard, well-documented topic in FastAPI. It fails to address any of the valid interpretations provided in the reference notes."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "task-execution-options",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/stream-data.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/stream-data.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer is a refusal (\"I do not have enough context\") despite the query being answerable using standard FastAPI documentation. It fails to address any of the valid interpretations provided in the reference notes.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer is a refusal (\"I do not have enough context\") despite the query being answerable using standard FastAPI documentation. It fails to address any of the valid interpretations provided in the reference notes."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-security-overview",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/openapi-callbacks.md",
+              "docs/en/docs/tutorial/security/first-steps.md",
+              "docs/en/docs/how-to/conditional-openapi.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md",
+              "docs/en/docs/tutorial/security/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/openapi-callbacks.md",
+              "docs/en/docs/tutorial/security/first-steps.md",
+              "docs/en/docs/how-to/conditional-openapi.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md",
+              "docs/en/docs/tutorial/security/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.75,
+          "reasoning": "3 of 4 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 4
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.75,
+          "reasoning": "Citation support Sc=0.75, Uncited groundedness Su=1.00. All sentences contain explicit inline citations.",
+          "metadata": {
+            "Sc_citation_support": 0.75,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": []
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "The generated answer correctly identifies and explains the use of OAuth2 and JWT, which is a primary and valid interpretation of securing a FastAPI application. It also correctly references the technical implementation details (SecurityBase/OAuth2PasswordBearer) consistent with FastAPI's documentation.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 1.0\nREASON: The generated answer correctly identifies and explains the use of OAuth2 and JWT, which is a primary and valid interpretation of securing a FastAPI application. It also correctly references the technical implementation details (SecurityBase/OAuth2PasswordBearer) consistent with FastAPI's documentation."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "database-integration-options",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/sql-databases.md",
+              "docs/en/docs/tutorial/encoder.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/advanced/async-tests.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/sql-databases.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/sql-databases.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.25,
+          "reasoning": "1 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/sql-databases.md",
+              "docs/en/docs/tutorial/encoder.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/advanced/async-tests.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/sql-databases.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/sql-databases.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.6666666666666666,
+          "reasoning": "2 of 3 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 3
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Citation verification failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_unit': '1/min/{project}/{region}', 'quota_limit_value': '0', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'service': 'generativelanguage.googleapis.com', 'consumer': 'projects/490710630994'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Citation verification failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:490710630994'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_unit': '1/min/{project}/{region}', 'quota_limit_value': '0', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'service': 'generativelanguage.googleapis.com', 'consumer': 'projects/490710630994'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-error-handling-ways",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/security/oauth2-scopes.md",
+              "docs/en/docs/deployment/concepts.md",
+              "docs/en/docs/fastapi-people.md",
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/frontend.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.2,
+          "reasoning": "1 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/security/oauth2-scopes.md",
+              "docs/en/docs/deployment/concepts.md",
+              "docs/en/docs/fastapi-people.md",
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/frontend.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'consumer': 'projects/547685505959', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'quota_unit': '1/min/{project}/{region}'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'consumer': 'projects/547685505959', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'quota_unit': '1/min/{project}/{region}'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:547685505959'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'consumer': 'projects/547685505959', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'quota_unit': '1/min/{project}/{region}'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-performance-tuning",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/reference/responses.md",
+              "docs/en/docs/how-to/general.md",
+              "docs/en/docs/features.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/deployment/concepts.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/async.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.2,
+          "reasoning": "1 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/reference/responses.md",
+              "docs/en/docs/how-to/general.md",
+              "docs/en/docs/features.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/deployment/concepts.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/async.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "LLM judge evaluation failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:835724681694'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'consumer': 'projects/835724681694', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_location': 'asia-southeast1', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {
+            "category": "ambiguous"
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-deployment-methods",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/deployment/fastapicloud.md",
+              "docs/en/docs/deployment/cloud.md",
+              "docs/en/docs/index.md",
+              "docs/en/docs/tutorial/first-steps.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/deployment/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/deployment/fastapicloud.md",
+              "docs/en/docs/deployment/cloud.md",
+              "docs/en/docs/index.md",
+              "docs/en/docs/tutorial/first-steps.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/deployment/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:1028073037609'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/1028073037609', 'quota_location': 'asia-southeast1', 'quota_unit': '1/min/{project}/{region}', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:1028073037609'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/1028073037609', 'quota_location': 'asia-southeast1', 'quota_unit': '1/min/{project}/{region}', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:1028073037609'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/1028073037609', 'quota_location': 'asia-southeast1', 'quota_unit': '1/min/{project}/{region}', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit_value': '0', 'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-middleware-usage",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 2 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/tutorial/middleware.md",
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/tutorial/middleware.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/tutorial/middleware.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.6666666666666666,
+          "reasoning": "2 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/tutorial/middleware.md",
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/tutorial/middleware.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/tutorial/middleware.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:772255847486'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'service': 'generativelanguage.googleapis.com', 'quota_limit_value': '0', 'consumer': 'projects/772255847486', 'quota_location': 'asia-southeast1'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:772255847486'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'service': 'generativelanguage.googleapis.com', 'quota_limit_value': '0', 'consumer': 'projects/772255847486', 'quota_location': 'asia-southeast1'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:772255847486'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_unit': '1/min/{project}/{region}', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'service': 'generativelanguage.googleapis.com', 'quota_limit_value': '0', 'consumer': 'projects/772255847486', 'quota_location': 'asia-southeast1'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "django-kubernetes",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/deployment/docker.md",
+              "docs/en/docs/deployment/concepts.md",
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "capital-of-france",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/translation-banner.md",
+              "docs/en/docs/external-links.md",
+              "docs/en/docs/tutorial/security/first-steps.md",
+              "docs/en/docs/deployment/manually.md",
+              "docs/en/docs/async.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "cricket-rules",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/how-to/migrate-from-pydantic-v1-to-pydantic-v2.md",
+              "docs/en/docs/advanced/events.md",
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/deployment/docker.md",
+              "docs/en/docs/tutorial/query-params.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:616825263214'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_unit': '1/min/{project}/{region}', 'service': 'generativelanguage.googleapis.com', 'quota_limit_value': '0', 'consumer': 'projects/616825263214', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:616825263214'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_unit': '1/min/{project}/{region}', 'service': 'generativelanguage.googleapis.com', 'quota_limit_value': '0', 'consumer': 'projects/616825263214', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "Evaluation failed: Gemini generation failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': \"Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:616825263214'.\", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_location': 'asia-southeast1', 'quota_unit': '1/min/{project}/{region}', 'service': 'generativelanguage.googleapis.com', 'quota_limit_value': '0', 'consumer': 'projects/616825263214', 'quota_metric': 'generativelanguage.googleapis.com/generate_content_requests', 'quota_limit': 'GenerateContentRequestsPerMinutePerProjectPerRegion'}}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Request a higher quota limit.', 'url': 'https://cloud.google.com/docs/quotas/help/request_increase'}]}]}}",
+          "metadata": {}
+        }
+      }
+    },
+    {
+      "query_id": "medieval-castles",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/index.md",
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/advanced/async-tests.md",
+              "docs/en/docs/how-to/separate-openapi-schemas.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "react-architecture",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/deployment/docker.md",
+              "docs/en/docs/project-generation.md",
+              "docs/en/docs/history-design-future.md",
+              "docs/en/docs/tutorial/frontend.md",
+              "docs/en/docs/tutorial/server-sent-events.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "nginx-nodejs",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/project-generation.md",
+              "docs/en/docs/deployment/concepts.md",
+              "docs/en/docs/deployment/https.md",
+              "docs/en/docs/advanced/behind-a-proxy.md",
+              "docs/en/docs/tutorial/server-sent-events.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "vitamin-d-deficiency",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/how-to/migrate-from-pydantic-v1-to-pydantic-v2.md",
+              "docs/en/docs/deployment/docker.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/deployment/fastapicloud.md",
+              "docs/en/docs/virtual-environments.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "binary-search-tree-java",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/stream-data.md",
+              "docs/en/docs/advanced/websockets.md",
+              "docs/en/docs/editor-support.md",
+              "docs/en/docs/advanced/json-base64-bytes.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "special-relativity",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/how-to/migrate-from-pydantic-v1-to-pydantic-v2.md",
+              "docs/en/docs/deployment/manually.md",
+              "docs/en/docs/index.md",
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/deployment/docker.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "dockerfile-go",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/deployment/docker.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "tcp-vs-udp",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/deployment/https.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "jvm-gc",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/tutorial/dependencies/sub-dependencies.md",
+              "docs/en/docs/deployment/concepts.md",
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/advanced/async-tests.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "all_supported": null,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": null,
+          "reasoning": "N/A: Query is unanswerable or generation not grounded (refusal response).",
+          "metadata": {
+            "Sc_citation_support": null,
+            "Su_uncited_groundedness": null
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    }
+  ]
+}

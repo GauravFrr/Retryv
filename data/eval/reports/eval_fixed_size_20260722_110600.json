@@ -1,0 +1,3520 @@
+{
+  "id": "eval_fixed_size_20260722_110600",
+  "strategy": "fixed_size",
+  "timestamp": "2026-07-22T11:06:00.727129+00:00",
+  "total_queries": 52,
+  "aggregate_metrics": {
+    "retrieval_recall": 0.3269,
+    "retrieval_precision": 0.1106,
+    "citation_accuracy": 0.1651,
+    "faithfulness": 0.2564,
+    "correctness": 0.3962
+  },
+  "category_breakdown": {
+    "lookup": {
+      "category": "lookup",
+      "count": 20,
+      "mean_scores": {
+        "retrieval_recall": 0.15,
+        "retrieval_precision": 0.15,
+        "citation_accuracy": 0.3208,
+        "faithfulness": 0.4083,
+        "correctness": 0.29
+      }
+    },
+    "multi_hop": {
+      "category": "multi_hop",
+      "count": 12,
+      "mean_scores": {
+        "retrieval_recall": 0.0417,
+        "retrieval_precision": 0.0833,
+        "citation_accuracy": 0.0833,
+        "faithfulness": 0.1667,
+        "correctness": 0.0667
+      }
+    },
+    "ambiguous": {
+      "category": "ambiguous",
+      "count": 8,
+      "mean_scores": {
+        "retrieval_recall": 0.1875,
+        "retrieval_precision": 0.2188,
+        "citation_accuracy": 0.1458,
+        "faithfulness": 0.1458,
+        "correctness": 0.25
+      }
+    },
+    "unanswerable": {
+      "category": "unanswerable",
+      "count": 12,
+      "mean_scores": {
+        "retrieval_recall": 1.0,
+        "retrieval_precision": 0.0,
+        "citation_accuracy": 0.0,
+        "faithfulness": 0.1667,
+        "correctness": 1.0
+      }
+    }
+  },
+  "results": [
+    {
+      "query_id": "lifespan-events",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/events.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/events.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/events.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 1.0,
+          "reasoning": "1 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/events.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/events.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/events.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 1.0,
+          "reasoning": "4 of 4 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 4
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.75,
+          "reasoning": "Citation support Sc=0.75, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 0.75,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "You can define this startup and shutdown logic using the `lifespan` parameter of the `FastAPI` app along with an async context manager function containing a `yield` [3, 5].",
+              "Code placed before the `yield` runs during startup (such as setting up resources like loading a model), and code placed after the `yield` runs during shutdown [2, 5]."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "The generated answer is exceptionally clear, comprehensive, and accurate. It covers all the quality criteria notes (mentioning the `lifespan` parameter, async context manager/`yield` pattern, startup logic before `yield`, and shutdown logic after `yield`) while also adding helpful context such as ASGI specification compliance and sub-application behavior, matching the FastAPI documentation accurately.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 1.0\nREASON: The generated answer is exceptionally clear, comprehensive, and accurate. It covers all the quality criteria notes (mentioning the `lifespan` parameter, async context manager/`yield` pattern, startup logic before `yield`, and shutdown logic after `yield`) while also adding helpful context such as ASGI specification compliance and sub-application behavior, matching the FastAPI documentation accurately."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "path-parameters",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/editor-support.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/path-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/editor-support.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/path-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, failing to provide the requested information about adding path parameters in FastAPI.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, failing to provide the requested information about adding path parameters in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "dependency-injection",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 1.0,
+          "reasoning": "1 of 1 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 1
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. All sentences contain explicit inline citations.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": []
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.5,
+          "reasoning": "The generated answer correctly identifies that FastAPI has a powerful dependency injection system with hierarchical dependencies, but it completely misses the core technical details required by the quality criteria: it fails to mention `Depends()` and does not explain how FastAPI automatically executes dependencies and passes their return values.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.5\nREASON: The generated answer correctly identifies that FastAPI has a powerful dependency injection system with hierarchical dependencies, but it completely misses the core technical details required by the quality criteria: it fails to mention `Depends()` and does not explain how FastAPI automatically executes dependencies and passes their return values."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "pydantic-models",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/advanced/dataclasses.md",
+              "docs/en/docs/advanced/generate-clients.md",
+              "docs/en/docs/python-types.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/advanced/dataclasses.md",
+              "docs/en/docs/advanced/generate-clients.md",
+              "docs/en/docs/python-types.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, whereas the reference answer provides a clear explanation of how to use Pydantic models with FastAPI (subclassing `BaseModel`, request body binding, and automatic validation).",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, whereas the reference answer provides a clear explanation of how to use Pydantic models with FastAPI (subclassing `BaseModel`, request body binding, and automatic validation)."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "json-response",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/advanced/additional-status-codes.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/advanced/additional-status-codes.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 1.0,
+          "reasoning": "1 of 1 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 1
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "By default, FastAPI returns JSON responses [1, 2]."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "The generated answer accurately explains that FastAPI returns JSON responses by default, covers Pydantic serialization via the `response_model`, and mentions the underlying mechanism (`jsonable_encoder`), fulfilling the core quality criteria effectively.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 1.0\nREASON: The generated answer accurately explains that FastAPI returns JSON responses by default, covers Pydantic serialization via the `response_model`, and mentions the underlying mechanism (`jsonable_encoder`), fulfilling the core quality criteria effectively."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "api-router",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/_llm-test.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/_llm-test.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, failing completely to provide the definition and purpose of `APIRouter` as described in the reference answer.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, failing completely to provide the definition and purpose of `APIRouter` as described in the reference answer."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "http-exceptions",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/help-fastapi.md",
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/help-fastapi.md",
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states it lacks context and fails to provide any information on how to handle HTTP exceptions in FastAPI, whereas the expected answer provides the correct method using `HTTPException`.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states it lacks context and fails to provide any information on how to handle HTTP exceptions in FastAPI, whereas the expected answer provides the correct method using `HTTPException`."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "request-body-validation",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 1.0,
+          "reasoning": "1 of 1 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 1
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. All sentences contain explicit inline citations.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": []
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.8,
+          "reasoning": "The generated answer correctly provides the code example using Pydantic `BaseModel` for request body validation. However, it misses explicitly mentioning that FastAPI automatically returns a 422 Unprocessable Entity status code on validation failure, which was specified in the quality criteria.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.8\nREASON: The generated answer correctly provides the code example using Pydantic `BaseModel` for request body validation. However, it misses explicitly mentioning that FastAPI automatically returns a 422 Unprocessable Entity status code on validation failure, which was specified in the quality criteria."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "background-tasks",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.6666666666666666,
+          "reasoning": "2 of 3 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 3
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.6666666666666666,
+          "reasoning": "Citation support Sc=0.67, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 0.6666666666666666,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "Starting from FastAPI 0.106.0, the behavior was changed so that you should create the resources for background tasks (such as a new database session) inside the background task itself, and use internally only data that doesn't depend on the resources of dependencies with `yield` [1, 5]."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.7,
+          "reasoning": "The generated answer correctly explains advanced usage, version changes (FastAPI 0.106.0), and Starlette's role regarding background tasks, but it completely misses the core fundamentals mentioned in the expected reference answer: how to implement them using the `BackgroundTasks` parameter and the `add_task()` method.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.7\nREASON: The generated answer correctly explains advanced usage, version changes (FastAPI 0.106.0), and Starlette's role regarding background tasks, but it completely misses the core fundamentals mentioned in the expected reference answer: how to implement them using the `BackgroundTasks` parameter and the `add_task()` method."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "oauth2-password-flow",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/project-generation.md",
+              "docs/en/docs/index.md",
+              "docs/en/docs/python-types.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/project-generation.md",
+              "docs/en/docs/index.md",
+              "docs/en/docs/python-types.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states it does not have enough context, failing to provide any information about the FastAPI OAuth2 password flow, whereas the reference answer clearly explains the key components (`OAuth2PasswordBearer`, `OAuth2PasswordRequestForm`, and JWT access tokens).",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states it does not have enough context, failing to provide any information about the FastAPI OAuth2 password flow, whereas the reference answer clearly explains the key components (`OAuth2PasswordBearer`, `OAuth2PasswordRequestForm`, and JWT access tokens)."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "cors-middleware",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/behind-a-proxy.md",
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/behind-a-proxy.md",
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 1.0,
+          "reasoning": "1 of 1 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 1
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. All sentences contain explicit inline citations.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": []
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer completely avoids giving the actual code or instructions, instead deflecting the user to a tutorial link. It fails to mention `CORSMiddleware`, `app.add_middleware()`, or `allow_origins`.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer completely avoids giving the actual code or instructions, instead deflecting the user to a tutorial link. It fails to mention `CORSMiddleware`, `app.add_middleware()`, or `allow_origins`."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "async-path-operations",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/async.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 1.0,
+          "reasoning": "1 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/async.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "If you are using third party libraries that tell you to call them with `await`, like:\n\n```Python\nresults = await some_library()\n```\n\nThen, declare your *path operation functions* with `async def` like:\n\n```Python hl_lines=\"2\"\n@app.get('/')\nasync def read_results():\n    results = await some_library()\n    return results\n```\n\nYou can only use `await` inside of functions created with `async def`.",
+              "If your application doesn't have to communicate with anything else and wait for it to respond, use `async def`, even if you don't need to use `await` inside."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.8,
+          "reasoning": "The generated answer is accurate regarding how and when to use `async def` with `await` (using third-party libraries, async operations). However, it misses the crucial architectural detail mentioned in the expected reference and FastAPI docs: that standard `def` functions run in an external thread pool, while `async def` functions run directly on the event loop (and what happens if you block them). Still, the instructions provided are practically correct for FastAPI.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.8\nREASON: The generated answer is accurate regarding how and when to use `async def` with `await` (using third-party libraries, async operations). However, it misses the crucial architectural detail mentioned in the expected reference and FastAPI docs: that standard `def` functions run in an external thread pool, while `async def` functions run directly on the event loop (and what happens if you block them). Still, the instructions provided are practically correct for FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "test-client",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/async-tests.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/testing.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/async-tests.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/testing.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it lacks context and fails to answer the question, whereas the expected answer provides a clear and complete explanation of the `TestClient`.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it lacks context and fails to answer the question, whereas the expected answer provides a clear and complete explanation of the `TestClient`."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "query-params-defaults",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/additional-responses.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/additional-responses.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, whereas the reference answer provides clear instructions on how to declare query parameters with default values in FastAPI.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, whereas the reference answer provides clear instructions on how to declare query parameters with default values in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "response-model-filter",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/additional-responses.md",
+              "docs/en/docs/advanced/dataclasses.md",
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/advanced/json-base64-bytes.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/additional-responses.md",
+              "docs/en/docs/advanced/dataclasses.md",
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/advanced/json-base64-bytes.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, whereas the expected reference answer provides a clear explanation of how to use `response_model` to filter output fields.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, whereas the expected reference answer provides a clear explanation of how to use `response_model` to filter output fields."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "query-param-validation-field",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it lacks enough context to answer the question, completely missing the correct explanation regarding the use of `Query()` and string validation constraints (`min_length`, `max_length`, `pattern`) available in FastAPI.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it lacks enough context to answer the question, completely missing the correct explanation regarding the use of `Query()` and string validation constraints (`min_length`, `max_length`, `pattern`) available in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "custom-response-class",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "Matched 1 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 1.0,
+          "reasoning": "1 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/custom-response.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.75,
+          "reasoning": "3 of 4 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 4
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.75,
+          "reasoning": "Citation support Sc=0.75, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 0.75,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "Alternatively, you can return a `Response` (or any subclass like `JSONResponse` or `HTMLResponse`) directly [1, 2, 3]."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "The generated answer is comprehensive, accurate, and completely covers the expectations of the reference answer while adding helpful context from the official FastAPI documentation (explaining both `response_class` and returning response objects directly, along with the `Response` parameters).",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 1.0\nREASON: The generated answer is comprehensive, accurate, and completely covers the expectations of the reference answer while adding helpful context from the official FastAPI documentation (explaining both `response_class` and returning response objects directly, along with the `Response` parameters)."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "cookie-parameters",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/python-types.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cookie-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/python-types.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/cookie-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, completely failing to provide the information about declaring cookie parameters using `Cookie()` from FastAPI.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, completely failing to provide the information about declaring cookie parameters using `Cookie()` from FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "header-parameters",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/behind-a-proxy.md",
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/header-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/behind-a-proxy.md",
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/header-params.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context, completely failing to answer the question, whereas the reference answer provides the correct implementation using `Header()` and explains hyphen-to-underscore conversion.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context, completely failing to answer the question, whereas the reference answer provides the correct implementation using `Header()` and explains hyphen-to-underscore conversion."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "file-uploads-bytes",
+      "category": "lookup",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/help-fastapi.md",
+              "docs/en/docs/translation-banner.md",
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/request-files.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/help-fastapi.md",
+              "docs/en/docs/translation-banner.md",
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/request-files.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it lacks context, completely failing to provide the information required about `UploadFile` and `File()` as outlined in the reference answer.",
+          "metadata": {
+            "category": "lookup",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it lacks context, completely failing to provide the information required about `UploadFile` and `File()` as outlined in the reference answer."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "lifespan-with-background-tasks",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/events.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md",
+              "docs/en/docs/advanced/events.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/events.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 1.0,
+          "reasoning": "1 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/events.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/background-tasks.md",
+              "docs/en/docs/advanced/events.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/events.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, failing to provide any information about lifespan events or background tasks.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, failing to provide any information about lifespan events or background tasks."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "oauth2-custom-exception-handler",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/advanced/custom-response.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, completely failing to provide the instructions on raising an `HTTPException` with the proper headers or registering a custom exception handler as outlined in the reference answer.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, completely failing to provide the instructions on raising an `HTTPException` with the proper headers or registering a custom exception handler as outlined in the reference answer."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "dependencies-with-yield-and-db-session",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context, completely failing to answer the prompt, whereas the reference answer provides a clear explanation of using `yield` with try/finally for database session management in FastAPI dependencies.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context, completely failing to answer the prompt, whereas the reference answer provides a clear explanation of using `yield` with try/finally for database session management in FastAPI dependencies."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "apirouter-tags-and-security-dependencies",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/index.md",
+              "docs/en/docs/advanced/generate-clients.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md",
+              "docs/en/docs/tutorial/dependencies/global-dependencies.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/index.md",
+              "docs/en/docs/advanced/generate-clients.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/bigger-applications.md",
+              "docs/en/docs/tutorial/dependencies/global-dependencies.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, whereas the expected reference answer provides the correct code and explanation for applying global authentication dependencies and OpenAPI tags to an APIRouter.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, whereas the expected reference answer provides the correct code and explanation for applying global authentication dependencies and OpenAPI tags to an APIRouter."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "pydantic-custom-validation-and-status-codes",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/dataclasses.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/dataclasses.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md",
+              "docs/en/docs/tutorial/body.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, completely failing to provide the requested information about Pydantic validation errors and how to override them.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, completely failing to provide the requested information about Pydantic validation errors and how to override them."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "cors-and-security-headers",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, completely failing to provide the solution found in the expected reference answer.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, completely failing to provide the solution found in the expected reference answer."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "background-tasks-with-db-dependency",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 1.0,
+          "reasoning": "1 of 1 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 1
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. All sentences contain explicit inline citations.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": []
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.8,
+          "reasoning": "The generated answer correctly explains the practical solution (creating a new session inside the background task and passing IDs/primitive types instead of database model instances tied to a yielded session). However, it fails to explicitly mention the underlying technical reason specified in the criteria—that dependency sessions with `yield` close *before* background tasks execute—and it does not cite the required source files.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.8\nREASON: The generated answer correctly explains the practical solution (creating a new session inside the background task and passing IDs/primitive types instead of database model instances tied to a yielded session). However, it fails to explicitly mention the underlying technical reason specified in the criteria—that dependency sessions with `yield` close *before* background tasks execute—and it does not cite the required source files."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "sub-dependencies-auth-scopes",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/tutorial/dependencies/sub-dependencies.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/oauth2-jwt.md",
+              "docs/en/docs/tutorial/dependencies/sub-dependencies.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, failing to provide the requested information about creating a hierarchy of security dependencies using sub-dependencies in FastAPI.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, failing to provide the requested information about creating a hierarchy of security dependencies using sub-dependencies in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "middleware-vs-dependencies-timing",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/middleware.md",
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/middleware.md",
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, failing to provide the difference in execution order between HTTP middleware and route dependencies.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, failing to provide the difference in execution order between HTTP middleware and route dependencies."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "custom-request-validation-and-response-model",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/dataclasses.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/index.md",
+              "docs/en/docs/advanced/additional-responses.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/tutorial/body-fields.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/dataclasses.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/index.md",
+              "docs/en/docs/advanced/additional-responses.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/response-model.md",
+              "docs/en/docs/tutorial/body-fields.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context, completely failing to answer the question, whereas the reference answer provides a clear explanation of how to use `Field()` for input validation and `response_model` for output filtering.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context, completely failing to answer the question, whereas the reference answer provides a clear explanation of how to use `Field()` for input validation and `response_model` for output filtering."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "testing-override-dependencies",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/advanced/async-tests.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/testing-dependencies.md",
+              "docs/en/docs/tutorial/testing.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/advanced/async-tests.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/testing-dependencies.md",
+              "docs/en/docs/tutorial/testing.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer simply states a lack of context, completely missing the solution involving `app.dependency_overrides` and `TestClient` required by the expected reference answer.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer simply states a lack of context, completely missing the solution involving `app.dependency_overrides` and `TestClient` required by the expected reference answer."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "web-sockets-with-dependencies",
+      "category": "multi_hop",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/websockets.md",
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/advanced/websockets.md",
+              "docs/en/docs/tutorial/dependencies/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that there is not enough context to answer the question, failing to provide the requested information about authenticating WebSockets using dependency injection in FastAPI.",
+          "metadata": {
+            "category": "multi_hop",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that there is not enough context to answer the question, failing to provide the requested information about authenticating WebSockets using dependency injection in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "validation-in-fastapi",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 3 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/python-types.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/path-params-numeric-validations.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/python-types.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/query-params-str-validations.md",
+              "docs/en/docs/tutorial/body.md",
+              "docs/en/docs/tutorial/path-params-numeric-validations.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations for data validation in FastAPI.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations for data validation in FastAPI."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "task-execution-options",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/async.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.5,
+          "reasoning": "1 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/advanced/advanced-dependencies.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/tutorial/background-tasks.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/async.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations listed in the reference notes.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer the question, failing to address any of the valid interpretations listed in the reference notes."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-security-overview",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/help-fastapi.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/project-generation.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/index.md",
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/help-fastapi.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/project-generation.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/security/index.md",
+              "docs/en/docs/tutorial/cors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, failing to provide any of the valid security mechanisms (like OAuth2, API keys, or CORS) listed in the reference notes.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, failing to provide any of the valid security mechanisms (like OAuth2, API keys, or CORS) listed in the reference notes."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "database-integration-options",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/help-fastapi.md",
+              "docs/en/docs/project-generation.md",
+              "docs/en/docs/advanced/async-tests.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/sql-databases.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/help-fastapi.md",
+              "docs/en/docs/project-generation.md",
+              "docs/en/docs/advanced/async-tests.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/sql-databases.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, failing to provide the standard SQLAlchemy/dependency injection approach outlined in the reference notes.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, failing to provide the standard SQLAlchemy/dependency injection approach outlined in the reference notes."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-error-handling-ways",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/management.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/features.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/management.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/handling-errors.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it does not have enough context to answer, failing to provide any information on how to manage errors in FastAPI, despite the reference notes outlining multiple valid interpretations.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it does not have enough context to answer, failing to provide any information on how to manage errors in FastAPI, despite the reference notes outlining multiple valid interpretations."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-performance-tuning",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/benchmarks.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/deployment/concepts.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/async.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.25,
+          "reasoning": "1 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/benchmarks.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/deployment/concepts.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/async.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 0.0,
+          "reasoning": "The generated answer states that it lacks enough context, completely failing to address any of the valid performance optimization interpretations outlined in the reference notes.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 0.0\nREASON: The generated answer states that it lacks enough context, completely failing to address any of the valid performance optimization interpretations outlined in the reference notes."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-deployment-methods",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.0,
+          "reasoning": "Matched 0 of 1 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/help-fastapi.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/deployment/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/help-fastapi.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/deployment/index.md"
+            ],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.5,
+          "reasoning": "1 of 2 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 2
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.5,
+          "reasoning": "Citation support Sc=0.50, Uncited groundedness Su=1.00. All sentences contain explicit inline citations.",
+          "metadata": {
+            "Sc_citation_support": 0.5,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": []
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "The generated answer addresses valid deployment concepts (cloud and CLI/service deployment for FastAPI) which fits one of the acceptable interpretations for deploying FastAPI apps, providing helpful and accurate information aligned with FastAPI's documentation.",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 1.0\nREASON: The generated answer addresses valid deployment concepts (cloud and CLI/service deployment for FastAPI) which fits one of the acceptable interpretations for deploying FastAPI apps, providing helpful and accurate information aligned with FastAPI's documentation."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "fastapi-middleware-usage",
+      "category": "ambiguous",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 0.5,
+          "reasoning": "Matched 1 of 2 expected sources.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/middleware.md",
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/middleware.md"
+            ]
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 1.0,
+          "reasoning": "1 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "expected_sources": [
+              "docs/en/docs/tutorial/middleware.md",
+              "docs/en/docs/advanced/middleware.md"
+            ],
+            "matched_sources": [
+              "docs/en/docs/advanced/middleware.md"
+            ]
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.6666666666666666,
+          "reasoning": "2 of 3 citations supported.",
+          "metadata": {
+            "all_supported": false,
+            "citations_count": 3
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.6666666666666666,
+          "reasoning": "Citation support Sc=0.67, Uncited groundedness Su=1.00. All sentences contain explicit inline citations.",
+          "metadata": {
+            "Sc_citation_support": 0.6666666666666666,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": []
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "The query is ambiguous, but the generated answer accurately addresses one valid interpretation (using `app.add_middleware()`, which is directly supported by official FastAPI documentation).",
+          "metadata": {
+            "category": "ambiguous",
+            "raw_response": "SCORE: 1.0\nREASON: The query is ambiguous, but the generated answer accurately addresses one valid interpretation (using `app.add_middleware()`, which is directly supported by official FastAPI documentation)."
+          }
+        }
+      }
+    },
+    {
+      "query_id": "django-kubernetes",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/help-fastapi.md",
+              "docs/en/docs/fastapi-cli.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "capital-of-france",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/fastapi-people.md",
+              "docs/en/docs/advanced/advanced-dependencies.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/_llm-test.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "cricket-rules",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/management.md",
+              "docs/en/docs/_llm-test.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 1.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=1.00. Uncited sentences are grounded in context.",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 1.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "medieval-castles",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/advanced/middleware.md",
+              "docs/en/docs/virtual-environments.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "react-architecture",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/history-design-future.md",
+              "docs/en/docs/index.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "nginx-nodejs",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 1 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/behind-a-proxy.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "vitamin-d-deficiency",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/python-types.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/_llm-test.md",
+              "docs/en/docs/advanced/advanced-python-types.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "binary-search-tree-java",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/python-types.md",
+              "docs/en/docs/advanced/json-base64-bytes.md",
+              "docs/en/docs/index.md",
+              "docs/en/docs/editor-support.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "special-relativity",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 4 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/python-types.md",
+              "docs/en/docs/async.md",
+              "docs/en/docs/management.md",
+              "docs/en/docs/_llm-test.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "dockerfile-go",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 5 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/advanced/behind-a-proxy.md",
+              "docs/en/docs/advanced/events.md",
+              "docs/en/docs/advanced/async-tests.md",
+              "docs/en/docs/_llm-test.md",
+              "docs/en/docs/project-generation.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "tcp-vs-udp",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 2 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/alternatives.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    },
+    {
+      "query_id": "jvm-gc",
+      "category": "unanswerable",
+      "scores": {
+        "retrieval_recall": {
+          "metric_name": "retrieval_recall",
+          "score": 1.0,
+          "reasoning": "No expected sources specified (unanswerable query) — score set to 1.0.",
+          "metadata": {
+            "retrieved_count": 5,
+            "expected_count": 0
+          }
+        },
+        "retrieval_precision": {
+          "metric_name": "retrieval_precision",
+          "score": 0.0,
+          "reasoning": "0 of 3 retrieved sources were relevant.",
+          "metadata": {
+            "retrieved_sources": [
+              "docs/en/docs/async.md",
+              "docs/en/docs/alternatives.md",
+              "docs/en/docs/management.md"
+            ],
+            "expected_sources": [],
+            "matched_sources": []
+          }
+        },
+        "citation_accuracy": {
+          "metric_name": "citation_accuracy",
+          "score": 0.0,
+          "reasoning": "0 of 0 citations supported.",
+          "metadata": {
+            "all_supported": true,
+            "citations_count": 0
+          }
+        },
+        "faithfulness": {
+          "metric_name": "faithfulness",
+          "score": 0.0,
+          "reasoning": "Citation support Sc=1.00, Uncited groundedness Su=0.00. Uncited sentences contain ungrounded facts (judge output: UNGROUNDED).",
+          "metadata": {
+            "Sc_citation_support": 1.0,
+            "Su_uncited_groundedness": 0.0,
+            "uncited_sentences": [
+              "I do not have enough context to answer this question."
+            ]
+          }
+        },
+        "correctness": {
+          "metric_name": "correctness",
+          "score": 1.0,
+          "reasoning": "Unanswerable query correctly returned insufficient-context response.",
+          "metadata": {
+            "is_grounded": false
+          }
+        }
+      }
+    }
+  ]
+}

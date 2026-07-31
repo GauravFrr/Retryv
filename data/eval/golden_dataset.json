@@ -1,0 +1,634 @@
+{
+  "_schema_version": "1.0",
+  "_description": "Retryv golden evaluation dataset — FastAPI docs corpus. This file is the single source of truth for all labeled evaluation data across all phases. Used by Phase 3 Unit 3.3 (confidence guard validation) and Phase 4 (retrieval recall, faithfulness, correctness, and citation verification).",
+  "_field_reference": {
+    "id": "Unique slug for this query",
+    "query": "Natural-language question as the user would type it",
+    "category": "'lookup' | 'multi_hop' | 'ambiguous' | 'unanswerable'",
+    "retrieval_sufficient": "bool — True if the FastAPI docs corpus CAN answer this question; False if out-of-domain",
+    "relevant_sources": "list[str] — relative paths of source files (must have 2+ files for 'multi_hop'; null for 'unanswerable')",
+    "expected_answer": "str — reference ground-truth answer (null for 'unanswerable')",
+    "answer_quality_notes": "str — specific criteria for correctness evaluation (for 'ambiguous', lists acceptable interpretations)",
+    "phase4_ready": "bool — True when fully validated for Phase 4 eval"
+  },
+  "queries": [
+    {
+      "id": "lifespan-events",
+      "query": "how do lifespan events work in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/advanced/events.md"
+      ],
+      "expected_answer": "Lifespan events in FastAPI are defined using an async context manager passed to the `lifespan` parameter of the `FastAPI()` app. Code before `yield` runs on startup, and code after `yield` runs on shutdown.",
+      "answer_quality_notes": "Must mention the `lifespan` parameter, `@asynccontextmanager`, startup logic before yield, and shutdown logic after yield.",
+      "phase4_ready": true
+    },
+    {
+      "id": "path-parameters",
+      "query": "how to add path parameters in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/path-params.md"
+      ],
+      "expected_answer": "Path parameters are declared using Python format string syntax in the path decorator (e.g. `@app.get('/items/{item_id}')`) and adding matching arguments with type annotations to the path operation function.",
+      "answer_quality_notes": "Must show path parameter syntax with curly braces `{param_name}` and type hints in function signature.",
+      "phase4_ready": true
+    },
+    {
+      "id": "dependency-injection",
+      "query": "what is dependency injection in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/dependencies/index.md"
+      ],
+      "expected_answer": "Dependency injection in FastAPI allows declaring shared logic, database sessions, or security requirements as functions and injecting them into path operations using `Depends()`.",
+      "answer_quality_notes": "Must mention `Depends()` and explain how FastAPI automatically executes dependencies and passes their return values.",
+      "phase4_ready": true
+    },
+    {
+      "id": "pydantic-models",
+      "query": "how to use pydantic models with FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/body.md"
+      ],
+      "expected_answer": "Pydantic models are defined by subclassing `BaseModel`. When declared as a parameter in a path operation function without path curly braces, FastAPI treats it as a JSON request body, performing automatic parsing and validation.",
+      "answer_quality_notes": "Must explain `BaseModel` subclassing, request body binding, and automatic validation/schema generation.",
+      "phase4_ready": true
+    },
+    {
+      "id": "json-response",
+      "query": "how to return JSON responses in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/response-model.md"
+      ],
+      "expected_answer": "FastAPI automatically converts returned Python dicts, lists, Pydantic models, or ORM objects to JSON. You can also explicitly set the `response_model` parameter in the decorator or return a `JSONResponse` object directly.",
+      "answer_quality_notes": "Must explain automatic dict/Pydantic serialization, `response_model`, or `JSONResponse`.",
+      "phase4_ready": true
+    },
+    {
+      "id": "api-router",
+      "query": "what is the purpose of APIRouter",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/bigger-applications.md"
+      ],
+      "expected_answer": "`APIRouter` allows structuring large FastAPI applications by grouping path operations into separate modules, which are then attached to the main app instance using `app.include_router()`.",
+      "answer_quality_notes": "Must mention modular routing, grouping related endpoints, and `app.include_router()`.",
+      "phase4_ready": true
+    },
+    {
+      "id": "http-exceptions",
+      "query": "how to handle HTTP exceptions in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/handling-errors.md"
+      ],
+      "expected_answer": "HTTP exceptions are handled by raising `HTTPException(status_code=..., detail=...)` from `fastapi`. FastAPI catches this exception and converts it into an HTTP error response for the client.",
+      "answer_quality_notes": "Must mention `raise HTTPException`, `status_code`, and `detail` parameters.",
+      "phase4_ready": true
+    },
+    {
+      "id": "request-body-validation",
+      "query": "how to add request body validation",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/body.md"
+      ],
+      "expected_answer": "Request body validation is implemented by defining a Pydantic `BaseModel` with typed fields and declaring it as a parameter in the path operation function. FastAPI returns a 422 Unprocessable Entity on validation failure.",
+      "answer_quality_notes": "Must mention Pydantic `BaseModel` field typing and automatic 422 HTTP validation error responses.",
+      "phase4_ready": true
+    },
+    {
+      "id": "background-tasks",
+      "query": "how does background tasks work in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/background-tasks.md"
+      ],
+      "expected_answer": "Background tasks allow running tasks after returning an HTTP response. Declare a parameter of type `BackgroundTasks` in the route function and add a task using `background_tasks.add_task(func, *args)`.",
+      "answer_quality_notes": "Must mention `BackgroundTasks` parameter, `add_task()` method, and execution after response delivery.",
+      "phase4_ready": true
+    },
+    {
+      "id": "oauth2-password-flow",
+      "query": "how to use OAuth2 with password flow",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/security/oauth2-jwt.md"
+      ],
+      "expected_answer": "OAuth2 password flow is implemented using `OAuth2PasswordBearer` for token extraction and `OAuth2PasswordRequestForm` for handling username/password authentication endpoints that return a JWT access token.",
+      "answer_quality_notes": "Must mention `OAuth2PasswordBearer`, `OAuth2PasswordRequestForm`, and JWT access tokens.",
+      "phase4_ready": true
+    },
+    {
+      "id": "cors-middleware",
+      "query": "how to add CORS middleware in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/cors.md"
+      ],
+      "expected_answer": "CORS middleware is added using `app.add_middleware(CORSMiddleware, allow_origins=..., allow_credentials=True, allow_methods=['*'], allow_headers=['*'])` imported from `fastapi.middleware.cors`.",
+      "answer_quality_notes": "Must mention `CORSMiddleware`, `app.add_middleware()`, and `allow_origins` configuration.",
+      "phase4_ready": true
+    },
+    {
+      "id": "async-path-operations",
+      "query": "how to write async path operation functions",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/async.md"
+      ],
+      "expected_answer": "Path operations can be declared with `async def` when performing non-blocking async operations (like async database calls or HTTP requests with `httpx`). Standard `def` functions run in a thread pool.",
+      "answer_quality_notes": "Must distinguish `async def` (event loop) from standard `def` (thread pool execution).",
+      "phase4_ready": true
+    },
+    {
+      "id": "test-client",
+      "query": "what is the testclient used for in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/testing.md"
+      ],
+      "expected_answer": "`TestClient` (built on Starlette and HTTPX) is used to simulate HTTP requests to a FastAPI application in pytest test suites without starting a real HTTP server.",
+      "answer_quality_notes": "Must mention `TestClient`, pytest integration, and simulating requests without running a server.",
+      "phase4_ready": true
+    },
+    {
+      "id": "query-params-defaults",
+      "query": "how to declare query parameters with default values",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/query-params.md"
+      ],
+      "expected_answer": "Query parameters are created by adding function parameters that are not in the path template. Default values are set directly in the parameter signature (e.g. `skip: int = 0`, `limit: int = 10`).",
+      "answer_quality_notes": "Must explain that non-path function parameters become query params and show default assignment syntax.",
+      "phase4_ready": true
+    },
+    {
+      "id": "response-model-filter",
+      "query": "how to use response_model to filter output fields",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/response-model.md"
+      ],
+      "expected_answer": "Setting `response_model=ItemOut` on a path operation decorator ensures FastAPI filters the returned object to only include fields defined in `ItemOut`, hiding internal fields like hashed passwords.",
+      "answer_quality_notes": "Must explain setting `response_model` on path operation decorator to restrict or filter response fields.",
+      "phase4_ready": true
+    },
+    {
+      "id": "query-param-validation-field",
+      "query": "how to add string validation to query parameters",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/query-params-str-validations.md"
+      ],
+      "expected_answer": "String query parameters can be validated using `Query()` from `fastapi`, specifying constraints like `min_length`, `max_length`, or regex `pattern` (e.g., `q: str | None = Query(default=None, max_length=50)`).",
+      "answer_quality_notes": "Must mention importing `Query` from `fastapi` and setting constraints like `min_length`, `max_length`, or `pattern`.",
+      "phase4_ready": true
+    },
+    {
+      "id": "custom-response-class",
+      "query": "how to return HTML or custom response types in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/advanced/custom-response.md"
+      ],
+      "expected_answer": "Custom response types can be returned by returning `HTMLResponse`, `PlainTextResponse`, or `RedirectResponse` directly from the path function, or by specifying `response_class=HTMLResponse` in the route decorator.",
+      "answer_quality_notes": "Must mention returning instances of `HTMLResponse` / `Response` subclasses or passing `response_class` to the decorator.",
+      "phase4_ready": true
+    },
+    {
+      "id": "cookie-parameters",
+      "query": "how to declare cookie parameters in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/cookie-params.md"
+      ],
+      "expected_answer": "Cookie parameters are declared using `Cookie()` from `fastapi` in the route function parameter list (e.g., `ads_id: str | None = Cookie(default=None)`).",
+      "answer_quality_notes": "Must mention importing `Cookie` from `fastapi` to bind incoming request cookie values.",
+      "phase4_ready": true
+    },
+    {
+      "id": "header-parameters",
+      "query": "how to read request headers in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/header-params.md"
+      ],
+      "expected_answer": "Request headers are declared using `Header()` from `fastapi`. FastAPI automatically converts hyphens to underscores in parameter names (e.g., `user_agent: str | None = Header(default=None)` reads `User-Agent`).",
+      "answer_quality_notes": "Must mention `Header()` and note automatic hyphen-to-underscore conversion.",
+      "phase4_ready": true
+    },
+    {
+      "id": "file-uploads-bytes",
+      "query": "how to handle file uploads in FastAPI",
+      "category": "lookup",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/request-files.md"
+      ],
+      "expected_answer": "File uploads are handled by using `UploadFile` (spool-backed file object) or `bytes` with `File()` from `fastapi`. `UploadFile` is preferred for large files as it avoids reading everything into memory.",
+      "answer_quality_notes": "Must mention `UploadFile` or `File()`, and explain memory efficiency of `UploadFile`.",
+      "phase4_ready": true
+    },
+    {
+      "id": "lifespan-with-background-tasks",
+      "query": "how to use lifespan events and background tasks together in a FastAPI application",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/advanced/events.md",
+        "docs/en/docs/tutorial/background-tasks.md"
+      ],
+      "expected_answer": "Lifespan events manage long-lived application lifecycle state (e.g. database connection pools or ML models) initialized before `yield` and closed after `yield`. `BackgroundTasks` manage per-request asynchronous jobs queued inside route handlers and executed immediately after returning an HTTP response to a client.",
+      "answer_quality_notes": "Must cite both `events.md` (lifespan app lifecycle state) and `background-tasks.md` (per-request response post-processing). Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "oauth2-custom-exception-handler",
+      "query": "how to customize error responses when OAuth2 token validation fails in FastAPI",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/security/oauth2-jwt.md",
+        "docs/en/docs/tutorial/handling-errors.md"
+      ],
+      "expected_answer": "When OAuth2 token validation fails inside a security dependency, raise an `HTTPException` with `status_code=status.HTTP_401_UNAUTHORIZED` and `headers={'WWW-Authenticate': 'Bearer'}`. To customize the global JSON shape across the app, register an `@app.exception_handler(HTTPException)` handler.",
+      "answer_quality_notes": "Must cite both `oauth2-jwt.md` (HTTP_401_UNAUTHORIZED with WWW-Authenticate header) and `handling-errors.md` (custom exception handlers). Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "dependencies-with-yield-and-db-session",
+      "query": "how to manage database sessions using dependency injection with yield and error handling",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+        "docs/en/docs/tutorial/handling-errors.md"
+      ],
+      "expected_answer": "Create a dependency function using `yield` (e.g. `db = SessionLocal(); try: yield db; finally: db.close()`). FastAPI guarantees that cleanup code after `yield` runs even if an `HTTPException` is raised during path operation execution.",
+      "answer_quality_notes": "Must cite both `dependencies-with-yield.md` (try/yield/finally DB session cleanup) and `handling-errors.md` (behavior when exceptions occur). Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "apirouter-tags-and-security-dependencies",
+      "query": "how to apply global authentication dependencies and OpenAPI tags to an APIRouter",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/bigger-applications.md",
+        "docs/en/docs/tutorial/dependencies/global-dependencies.md"
+      ],
+      "expected_answer": "Pass `dependencies=[Depends(verify_token)]` and `tags=['admin']` to `APIRouter(prefix='/admin', tags=['admin'], dependencies=[Depends(verify_token)])`. This enforces authentication across all routes within that router and groups them in automatic API docs.",
+      "answer_quality_notes": "Must cite both `bigger-applications.md` (APIRouter prefix and tags) and `global-dependencies.md` (dependencies parameter on APIRouter). Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "pydantic-custom-validation-and-status-codes",
+      "query": "how do Pydantic request body validation errors turn into HTTP 422 responses and how to override them",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/body.md",
+        "docs/en/docs/tutorial/handling-errors.md"
+      ],
+      "expected_answer": "Pydantic validates incoming request body JSON. On failure, FastAPI automatically raises `RequestValidationError` which defaults to an HTTP 422 status code. You can override this payload by registering an `@app.exception_handler(RequestValidationError)` handler.",
+      "answer_quality_notes": "Must cite both `body.md` (Pydantic validation) and `handling-errors.md` (`RequestValidationError` custom handler). Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "cors-and-security-headers",
+      "query": "how to configure CORS middleware alongside OAuth2 authorization header requirements",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/cors.md",
+        "docs/en/docs/tutorial/security/oauth2-jwt.md"
+      ],
+      "expected_answer": "Add `CORSMiddleware` with `allow_headers=['*']` (or explicitly including `'Authorization'`) and `allow_origins=[...]`. Route handlers use `OAuth2PasswordBearer` which expects the `Authorization: Bearer <token>` header in cross-origin HTTP requests.",
+      "answer_quality_notes": "Must cite both `cors.md` (CORSMiddleware header configuration) and `oauth2-jwt.md` (Authorization Bearer header). Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "background-tasks-with-db-dependency",
+      "query": "how to pass database models or state from route dependencies into background tasks",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/background-tasks.md",
+        "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"
+      ],
+      "expected_answer": "Route dependencies with `yield` close their DB session *before* background tasks execute. Therefore, extract necessary primitive arguments (e.g. `user_id: int`) or create a fresh DB session inside the background task function rather than passing the yields session object.",
+      "answer_quality_notes": "Must cite both `background-tasks.md` and `dependencies-with-yield.md` explaining session lifecycle timing. Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "sub-dependencies-auth-scopes",
+      "query": "how to create a hierarchy of security dependencies using sub-dependencies in FastAPI",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/dependencies/sub-dependencies.md",
+        "docs/en/docs/tutorial/security/oauth2-jwt.md"
+      ],
+      "expected_answer": "Sub-dependencies allow chain-linking security requirements: a top-level `get_current_user` dependency depends on `oauth2_scheme`, and higher-level `get_current_active_user` depends on `Depends(get_current_user)`.",
+      "answer_quality_notes": "Must cite both `sub-dependencies.md` (dependency chaining) and `oauth2-jwt.md` (user auth flow). Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "middleware-vs-dependencies-timing",
+      "query": "what is the difference in execution order between HTTP middleware and route dependencies",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/middleware.md",
+        "docs/en/docs/tutorial/dependencies/index.md"
+      ],
+      "expected_answer": "Middleware wraps every incoming HTTP request before routing takes place. Route dependencies execute only after path matching completes and before the path operation function runs.",
+      "answer_quality_notes": "Must cite both `middleware.md` and `dependencies/index.md` explaining request pipeline ordering. Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "custom-request-validation-and-response-model",
+      "query": "how to use response_model together with custom Field validation in input request bodies",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/body-fields.md",
+        "docs/en/docs/tutorial/response-model.md"
+      ],
+      "expected_answer": "Use Pydantic's `Field()` (e.g. `Field(gt=0)`) in input `BaseModel` classes for incoming validation, and specify `response_model=UserOut` in the decorator to shape and sanitize outgoing output JSON.",
+      "answer_quality_notes": "Must cite both `body-fields.md` (`Field()` validation) and `response-model.md` (`response_model` output filtering). Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "testing-override-dependencies",
+      "query": "how to override database dependencies when running tests with TestClient",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/testing.md",
+        "docs/en/docs/advanced/testing-dependencies.md"
+      ],
+      "expected_answer": "Use `app.dependency_overrides[get_db] = override_get_db` during pytest execution so `TestClient` requests use a mock or in-memory database, and reset `app.dependency_overrides = {}` after tests.",
+      "answer_quality_notes": "Must cite both `testing.md` (`TestClient`) and `testing-dependencies.md` (`app.dependency_overrides`). Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "web-sockets-with-dependencies",
+      "query": "how to authenticate WebSockets using dependency injection in FastAPI",
+      "category": "multi_hop",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/advanced/websockets.md",
+        "docs/en/docs/tutorial/dependencies/index.md"
+      ],
+      "expected_answer": "WebSocket routes declared with `@app.websocket('/ws')` accept dependency injection via `Depends()`. Dependencies can inspect query parameters or headers (e.g. `cookie_or_token`) before calling `websocket.accept()`.",
+      "answer_quality_notes": "Must cite both `websockets.md` and `dependencies/index.md`. Requires at least 2 source files.",
+      "phase4_ready": true
+    },
+    {
+      "id": "validation-in-fastapi",
+      "query": "how to do validation in FastAPI",
+      "category": "ambiguous",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/body.md",
+        "docs/en/docs/tutorial/path-params-numeric-validations.md",
+        "docs/en/docs/tutorial/query-params-str-validations.md"
+      ],
+      "expected_answer": "FastAPI provides validation across request data using Pydantic models for JSON request bodies, `Query()` for query parameters, `Path()` for path parameters, and `Field()` for model attributes.",
+      "answer_quality_notes": "Ambiguous query with multiple valid interpretations: (1) Pydantic request body validation, (2) Path/Query numeric & string validations with `Path()`/`Query()`, (3) Custom Pydantic validator functions, or (4) Handling `RequestValidationError`. Answer is valid if it clearly addresses at least one of these interpretations.",
+      "phase4_ready": true
+    },
+    {
+      "id": "task-execution-options",
+      "query": "how to run tasks in the background vs async in FastAPI",
+      "category": "ambiguous",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/async.md",
+        "docs/en/docs/tutorial/background-tasks.md"
+      ],
+      "expected_answer": "`async def` runs non-blocking I/O concurrently on the event loop during request processing. `BackgroundTasks` executes functions asynchronously *after* the HTTP response has been sent to the client.",
+      "answer_quality_notes": "Ambiguous query: could refer to (1) `async def` event loop execution vs (2) `BackgroundTasks` post-response processing, or (3) external task queues like Celery. Answer is valid if it correctly explains at least one contrast.",
+      "phase4_ready": true
+    },
+    {
+      "id": "fastapi-security-overview",
+      "query": "how to secure a FastAPI API",
+      "category": "ambiguous",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/security/index.md",
+        "docs/en/docs/tutorial/cors.md"
+      ],
+      "expected_answer": "FastAPI security can be implemented via OAuth2 with JWT tokens, HTTP Basic Auth, API Key headers, or CORS middleware settings depending on application requirements.",
+      "answer_quality_notes": "Ambiguous query: can cover (1) OAuth2 password flow with JWT, (2) HTTP Basic / Bearer auth, (3) API keys, or (4) CORS middleware. Correctness eval checks if at least one valid security mechanism is detailed.",
+      "phase4_ready": true
+    },
+    {
+      "id": "database-integration-options",
+      "query": "how to connect to a database in FastAPI",
+      "category": "ambiguous",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/sql-databases.md"
+      ],
+      "expected_answer": "FastAPI supports any database library. Standard relational database integration uses SQLAlchemy (or SQLModel) with dependency injection providing per-request database sessions.",
+      "answer_quality_notes": "Ambiguous query: could refer to (1) SQLAlchemy ORM with sessions, (2) SQLModel, (3) Async ORMs like Tortoise/Peewee, or (4) NoSQL databases like MongoDB/Motor. Answer is valid if it explains database sessions via dependencies.",
+      "phase4_ready": true
+    },
+    {
+      "id": "fastapi-error-handling-ways",
+      "query": "how to manage errors in FastAPI",
+      "category": "ambiguous",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/handling-errors.md"
+      ],
+      "expected_answer": "Errors in FastAPI are managed by raising `HTTPException`, handling `RequestValidationError`, or defining custom exception handlers with `@app.exception_handler()`.",
+      "answer_quality_notes": "Ambiguous query: could mean (1) raising `HTTPException`, (2) overriding `RequestValidationError` for custom 422 JSON, or (3) catching custom domain exceptions. Valid if it covers at least one error handling pattern.",
+      "phase4_ready": true
+    },
+    {
+      "id": "fastapi-performance-tuning",
+      "query": "how to optimize performance in FastAPI",
+      "category": "ambiguous",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/async.md",
+        "docs/en/docs/deployment/concepts.md"
+      ],
+      "expected_answer": "FastAPI performance is optimized by using `async def` for I/O operations, standard `def` for blocking tasks, running multiple server workers with Gunicorn/Uvicorn, or caching response models.",
+      "answer_quality_notes": "Ambiguous query: could focus on (1) `async def` vs `def` threadpool mechanics, (2) Uvicorn/Gunicorn worker process counts, or (3) Pydantic serialization speed. Valid if any performance topic is addressed.",
+      "phase4_ready": true
+    },
+    {
+      "id": "fastapi-deployment-methods",
+      "query": "how to deploy FastAPI apps",
+      "category": "ambiguous",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/deployment/index.md"
+      ],
+      "expected_answer": "FastAPI apps can be deployed using Uvicorn/Hypercorn ASGI servers, Docker containers, or process managers like Gunicorn with Uvicorn workers.",
+      "answer_quality_notes": "Ambiguous query: could mean (1) Docker containerization, (2) Uvicorn/Gunicorn CLI execution, or (3) Cloud/K8s deployment concepts. Valid if it covers standard ASGI deployment.",
+      "phase4_ready": true
+    },
+    {
+      "id": "fastapi-middleware-usage",
+      "query": "how to use middleware in FastAPI",
+      "category": "ambiguous",
+      "retrieval_sufficient": true,
+      "relevant_sources": [
+        "docs/en/docs/tutorial/middleware.md",
+        "docs/en/docs/advanced/middleware.md"
+      ],
+      "expected_answer": "Middleware can be added using built-in classes like `CORSMiddleware` via `app.add_middleware()`, or by creating custom async functions decorated with `@app.middleware('http')`.",
+      "answer_quality_notes": "Ambiguous query: could mean (1) built-in middlewares like CORS/GZip, or (2) writing custom `@app.middleware('http')` functions. Valid if either approach is described.",
+      "phase4_ready": true
+    },
+    {
+      "id": "django-kubernetes",
+      "query": "how to deploy a Django application on Kubernetes",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    },
+    {
+      "id": "capital-of-france",
+      "query": "what is the capital of France",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    },
+    {
+      "id": "cricket-rules",
+      "query": "explain the rules of cricket",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    },
+    {
+      "id": "medieval-castles",
+      "query": "how do medieval castle fortifications work",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    },
+    {
+      "id": "react-architecture",
+      "query": "best practices for React component architecture",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    },
+    {
+      "id": "nginx-nodejs",
+      "query": "how to configure Nginx as a reverse proxy for Node.js",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    },
+    {
+      "id": "vitamin-d-deficiency",
+      "query": "what are the symptoms of vitamin D deficiency",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    },
+    {
+      "id": "binary-search-tree-java",
+      "query": "how to implement a binary search tree in Java",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    },
+    {
+      "id": "special-relativity",
+      "query": "explain the theory of special relativity",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    },
+    {
+      "id": "dockerfile-go",
+      "query": "how to write a Dockerfile for a Go application",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    },
+    {
+      "id": "tcp-vs-udp",
+      "query": "what is the difference between TCP and UDP",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    },
+    {
+      "id": "jvm-gc",
+      "query": "how does garbage collection work in the JVM",
+      "category": "unanswerable",
+      "retrieval_sufficient": false,
+      "relevant_sources": null,
+      "expected_answer": null,
+      "answer_quality_notes": null,
+      "phase4_ready": true
+    }
+  ]
+}
